@@ -9,15 +9,22 @@ long double factorial;
 
 //ejercicio 4
 int dia;
-   					
+   	
+//ejercicio 5
+char pass[10];
+int correcto;
+int intento;
+const char contrasena[]="123456"; 
+	   				
 int main(int argc, char *argv[]){
 	//Ejercicio 2
 	int numero;
-	
+	do{
 	cout << "Bienvenido \n";
 	cout << "Que ejercicio desea realizar \n";
-	cout << "Ejercicio1 \nEjercicio2 \nEjercicio3\nEjercicio4\n";
+	cout << "Ejercicio1 \nEjercicio2 \nEjercicio3\nEjercicio4\nEjercicio5\n0-salir\n";
 	cin >> opejercicio ;
+	
 	
 	switch (opejercicio){
 		case 1: 	  					
@@ -77,6 +84,27 @@ int main(int argc, char *argv[]){
 		break;
 	}
 	return 0;	break;	
-} 
+	
+	case 5: intento=1;
+    correcto=0;
+    printf("Introduzca la contrasena: "); gets(pass); printf("\n");
+    if (strcmp(pass,contrasena)==0) correcto=1;
+    while ((correcto==0)&&(intento<3))
+    {
+        intento++;
+        printf("Contrasena incorrecta. %i intento: ", intento); gets(pass); printf("\n");
+        if (strcmp(pass,contrasena)==0) correcto=1;
+    }
+    if (correcto==0) printf("Se han excedido el numero de intentos.");
+    else
+        {
+            printf("Bienvenido.");
+            
+        }
+    return 0; break;
+   
+    default : cout << "Error intente de nuevo"; 
+  }  system("cls");
+	} while (opejercicio); 
 	
 return 0;	}
