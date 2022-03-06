@@ -7,15 +7,18 @@ int n,i;
 long double factorial; 
   					
 
-
+//ejercicio 4
+int dia;
    					
 int main(int argc, char *argv[]){
 	//Ejercicio 2
 	int numero;
+	
 	cout << "Bienvenido \n";
 	cout << "Que ejercicio desea realizar \n";
-	cout << "Ejercicio1 \nEjercicio2 \nEjercicio3\n";
+	cout << "Ejercicio1 \nEjercicio2 \nEjercicio3\nEjercicio4\n";
 	cin >> opejercicio ;
+	
 	switch (opejercicio){
 		case 1: 	  					
    					cout << "Ingrese un numero: ";
@@ -53,7 +56,27 @@ int main(int argc, char *argv[]){
 		cout<<"los numeros pares son:"<<cp<<endl;
 		cout<<"los numeros impares son:"<<ci<<endl;
 		
-		}			
+		}	break;
+		case 4 : cout << "ingrese numero de dia ";
+	cin >> dia;
+	
+	switch (dia){
+		case 1 : cout << "Lunes Dia laboral";
+		break;
+		case 2 : cout << "Martes Dia laboral";
+		break;
+		case 3 : cout << "Miercoles Dia laboral";
+		break;
+		case 4 : cout << "Jueves Dia laboral";
+		break;
+		case 5 : cout << "Viernes Dia laboral";
+		break;
+		case 6 : cout << "Sabado Dia de descanso";
+		break;
+		case 7 : cout << "Domingo Dia de descanso";
+		break;
+	}
+	return 0;	break;	
 } 
 	
 return 0;	}
